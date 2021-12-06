@@ -10,3 +10,20 @@
 //********************************************************************************************************************//
 
 package goipify
+
+import (
+	"log"
+	"testing"
+)
+
+func Test(t *testing.T) {
+
+	// Get my ip address
+	ip, err := Ip()
+	if err != nil {
+		log.Fatalln(err)
+	} else {
+		log.Println(ip)
+	}
+
+}
